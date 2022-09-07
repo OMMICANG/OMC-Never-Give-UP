@@ -65,7 +65,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -1.5rem;
+        margin-top: -4rem;
         margin-bottom: -.5rem;
     /* border: 1px solid red; */
     font-size: 1rem;
@@ -128,7 +128,7 @@
         position: fixed;
         font-size: .5rem;
         font-weight: 700;
-        margin-top: 15.4rem;
+        margin-top: 13.4rem;
          background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
         background-size: 400%;
         -webkit-text-fill-color: transparent;
@@ -142,6 +142,7 @@
     margin: 0;
     padding: 0;
     /* background: #000; */
+    border: 1px solid #fff;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -154,9 +155,10 @@
 }
 
 .ring {
-    position: absolute;
-    width: 23rem;
-    height: 24rem;
+    position: fixed;
+    display: flex                      ;
+    width: 22rem;
+    height: 23rem;
     border-radius: 50%;
     /* animation: ring 5s linear ; */
     -webkit-animation-name: ring;
@@ -189,7 +191,8 @@
 }
 
 .ring1 {
-    position: absolute;
+    display: flex;
+    position: fixed;
     width: 20.5rem;
     height: 21rem;
     border-radius: 50%;
