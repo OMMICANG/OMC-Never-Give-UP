@@ -128,7 +128,7 @@
         position: fixed;
         font-size: .5rem;
         font-weight: 700;
-        margin-top: 13.4rem;
+        margin-top: 11.4rem;
          background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
         background-size: 400%;
         -webkit-text-fill-color: transparent;
@@ -157,8 +157,8 @@
 .ring {
     position: fixed;
     display: flex                      ;
-    width: 22rem;
-    height: 23rem;
+    width: 23rem;
+    height: 24rem;
     border-radius: 50%;
     /* animation: ring 5s linear ; */
     -webkit-animation-name: ring;
@@ -168,7 +168,7 @@
     -webkit-animation-delay: 0s;
     opacity: 1;
     margin-left: 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
 }
 
 /* Circular Ring0 Inc End */
