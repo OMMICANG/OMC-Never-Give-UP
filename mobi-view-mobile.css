@@ -1,0 +1,211 @@
+@media  screen and (max-width: 700px) {
+    #popUp {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 55%;
+        height: 6.5%;
+        font-size: 15px;
+        background-color: rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        justify-content: center;
+        overflow: visible;
+        
+      }
+      
+      #Yes {
+        margin-top: 2rem;
+        border: 0.5px solid;
+        border-radius: 20%;
+        cursor: pointer;
+        margin-left: -11.5rem;
+        padding: 1px;
+      }
+      
+      #No {
+        margin-top: 2rem;
+        border: 0.5px solid;
+        border-radius: 20%;
+        cursor: pointer;
+        padding: 1px;
+      }
+      
+      #Yes:hover, #No:hover {
+        background-color: var(--top-headerCol) ;
+        color: var(--border-primary);
+      }
+      
+      /* Timer popUp Ends Here */
+
+    .container {
+        display: flex;
+        position: fixed;
+        background-color: transparent;
+        border: unset;
+        margin-top: -30rem;
+        left: 80%;
+        z-index: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        min-width: 50vw;
+        font-size: 1rem;
+        margin-top: 2rem;
+        /* border: 1px solid #fff; */
+        position: fixed;
+        margin-left: 3rem;
+    }
+    
+    .never {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -1.5rem;
+        margin-bottom: -.5rem;
+    /* border: 1px solid red; */
+    font-size: 1rem;
+    }
+
+    .G {
+        font-size: 4rem;
+    }
+
+    .give {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        margin-top: 0rem;
+        margin-bottom: -.5rem;
+        /* border: 1px solid blue; */
+        -webkit-animation-name: give;
+        -webkit-animation-duration: 9s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-delay: 0s;
+    
+    }
+
+    .up {
+        color: transparent;
+        font-size: 4rem;
+        /* border: 1px solid green; */
+        -webkit-animation-name: up;
+        -webkit-animation-duration: 11s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-delay: 0s;
+    
+    }
+
+    .ever {
+        color: transparent;
+        margin-left: 1px;
+        -webkit-animation-name: ever;
+        -webkit-animation-duration: 9s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-delay: 0s;
+    }
+
+    .caps {
+        font-size: 3rem;
+        color: transparent;
+        -webkit-animation-name: effect;
+        -webkit-animation-duration: 7s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-delay: 0s;
+    }
+
+    .ommicang {
+        display: flex;
+        position: fixed;
+        font-size: .5rem;
+        font-weight: 700;
+        margin-top: 15.4rem;
+         background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+        background-size: 400%;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        /* animation: animate  4s linear infinite; */
+    }
+
+    /* Circular Ring0 Inc+ */
+
+#loader {
+    margin: 0;
+    padding: 0;
+    /* background: #000; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* z-index: 9; */
+}
+
+.ring {
+    position: absolute;
+    width: 23rem;
+    height: 24rem;
+    border-radius: 50%;
+    /* animation: ring 5s linear ; */
+    -webkit-animation-name: ring;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+    opacity: 1;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+
+/* Circular Ring0 Inc End */
+
+/* Circular Ring1 Inc+ */
+
+#loader1 {
+    margin: 0;
+    padding: 0;
+    /* background: #000; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* z-index: 9; */
+}
+
+.ring1 {
+    position: absolute;
+    width: 20.5rem;
+    height: 21rem;
+    border-radius: 50%;
+    /* animation: ring1 5s linear ; */
+    -webkit-animation-name: ring1;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+    opacity: 1;
+    margin-left: 1rem;
+    border-top: -100%;
+    margin-bottom: .5rem;
+}
+
+
+/* Circular Ring1 Inc End */
+
+}

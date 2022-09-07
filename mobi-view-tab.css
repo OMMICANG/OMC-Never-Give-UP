@@ -1,0 +1,106 @@
+@media screen and (max-width: 980px) {
+    .container {
+        display: flex;
+        position: fixed;
+        background-color: transparent;
+        border: unset;
+        margin-top: -50rem;
+        left: 85%;
+        z-index: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        min-width: 50vw;
+        font-size: 2rem;
+        margin-top: 2rem;
+        /* border: 1px solid #fff; */
+        position: fixed;
+        margin-left: 3rem;
+    }
+    
+    .never {
+        margin-top: -2rem;
+        margin-bottom: -1rem;
+    /* border: 1px solid red; */
+    font-size: 1rem;
+    }
+
+    /* Circular Ring0 Inc+ */
+
+#loader {
+    margin: 0;
+    padding: 0;
+    /* background: #000; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* z-index: 9; */
+}
+
+.ring {
+    position: absolute;
+    width: 40rem;
+    height: 39rem;
+    border-radius: 50%;
+    /* animation: ring 5s linear ; */
+    -webkit-animation-name: ring;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+    opacity: 1;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+
+/* Circular Ring0 Inc End */
+
+/* Circular Ring1 Inc+ */
+
+#loader1 {
+    margin: 0;
+    padding: 0;
+    /* background: #000; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* z-index: 9; */
+}
+
+.ring1 {
+    position: absolute;
+    width: 32.5rem;
+    height: 34rem;
+    border-radius: 50%;
+    /* animation: ring1 5s linear ; */
+    -webkit-animation-name: ring1;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+    opacity: 1;
+    margin-left: 1rem;
+    border-top: -100%;
+    margin-bottom: .5rem;
+}
+
+
+/* Circular Ring1 Inc End */
+
+
+}

@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* DarkMode style */
+
+ :root {
+    --primary-color: #000;
+    --secondary-color: rgba(00, 00, 00, 0.5);
+    --border-primary: rgba(0, 0, 0, 0.9);
+    --top-headerCol:  rgba(44, 60, 92, 1);
+    }
+    
+    .dark-mode {
+    --primary-color: linear-gradient(to bottom, #2e2d31 0%, #382a02 100%);
+    --secondary-color: #fff;
+    --border-primary: rgba(179, 0, 0, 0.9);
+    --top-headerCol: rgba(50, 50, 50, 1);
+    }
+    
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--primary-color);
+    transition: background-color 2s ease-in;
+    color: #fff;
+}
+
+/* Timer popUp Starts Here */
+
+#popUp {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 25%;
+    height: 7%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    /* margin-left: 35%; */
+    justify-content: center;
+    overflow: hidden;
+    
+    }
+    
+    #Yes {
+    margin-top: 1.3rem;
+    border: 0.5px solid;
+    border-radius: 20%;
+    cursor: pointer;
+    margin-left: -13rem;
+    padding: 2px;
+    }
+    
+    #No {
+    margin-top: 1.3rem;
+    border: 0.5px solid;
+    border-radius: 20%;
+    cursor: pointer;
+    padding: 2px;
+    
+    }
+    
+    #Yes:hover, #No:hover {
+    background-color: var(--top-headerCol) ;
+    color: var(--border-primary);
+    }
+    
+    /* Timer popUp Ends Here */
+
+ /* Toggle Button Starts Here */
+
+ /* #toggle {
+    display: none;
+}
+
+#button {
+    display: flex;
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    margin-top: -35rem;
+    left: 35%;
+}
+
+#button::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f186" ; */
+    /* Add in the image. You could also add an icon by the using the icon's unicode (sites like fontawesome.com provide this). */
+/* width: 25px;
+height: 25px; */
+/* Making the icon slightly taller than the button container. */
+/* background-color: #e03c3c;
+color: rgba(0, 0, 50, 0.8);
+border: 2px solid #fff;
+border-radius: 50%;
+box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+position: absolute;
+top: -5px; */
+/* Since the button has a height of 35px and the ::after has 40px, we offset the difference by pushing it up by 5px to center this element vertically. */
+/* left: 0;
+display: grid; */
+/* Used for centering the icon image in the middle in conjunction with place content center. */
+/* place-content: center;
+line-height: 0; */
+/*By default this will have a line height. This means that the image will not be perfectly centered by using the properties above. To make sure we can center this image in the middle, we make the line height 0. */
+/* transition: background-color 1.5s, */
+    /* transform 1.3s ease-in; check to see if image transformation time can be altered
+} */
+
+/* #toggle:checked+#button::after {
+content: url('./Images/moon-svgrepo-com.svg'); */
+/* Switching the images when clicked. */
+/* background-color: #1f257f;
+font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f185" ; 
+  color: rgba(250, 150, 50, 150.9);
+transform: translateX(20px) rotate(360deg);
+transition: all 2s ease-in-out; */
+/* Since the width of the button is 90px and the pseudo element is 40px we translate by a number that adds up to 90. So we translate to the right by 50px ( 40 + 50 = 90 width of the button). We also rotate this element by 360 degrees. */
+/* } */
+
+  /* Toggle Button Ends Here */
+
+.back-Image-Container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./Images/OMClogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    position: fixed;
+}
+
+/* New Dark Mode Try */
+
+/* .dark {
+    background-color: #000;
+} */
+
+.container {
+    display: flex;
+    position: fixed;
+    background-color: transparent;
+    border: unset;
+    margin-top: -30rem;
+    left: 85%;
+    z-index: 1;
+}
+.sun, .moon {
+    font-size: 2rem;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.moon {
+    position: absolute;
+    inset: 0;
+    color: #fff;
+}
+.sun-logo {
+    opacity: 0;
+    transform: translateY(20%) rotateZ(50deg);
+    transition: all 3s ease-out;
+}
+
+.moon-logo {
+    opacity: 1;
+    transform: translateY(0) rotateZ(0deg);
+    transition: all 3s ease-out;
+}
+.animate-moon {
+    opacity: 0;
+    transform: translateY(20%) rotateZ(100deg);
+    color: #fff;
+}
+.animate-sun {
+    opacity: 1;
+    transform: translateY(0%) rotateZ(0deg);
+    color: rgb(255, 145, 0) ;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50vh;
+    min-width: 50vw;
+    font-size: 2rem;
+    /* border: 1px solid #fff; */
+    position: fixed;
+    margin-left: 3rem;
+}
+
+
+.never {
+    margin-top: 0rem;
+    margin-bottom: -1rem;
+/* border: 1px solid red; */
+font-size: 1rem;
+}
+
+.G {
+    font-size: 5rem;
+}
+.give {
+    color: transparent;
+    /* border: 1px solid blue; */
+    -webkit-animation-name: give;
+    -webkit-animation-duration: 9s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+
+}
+
+@-webkit-keyframes give {
+    0% {
+    }
+    70% {
+        color:   #e65c00;
+        /* rgba(1, 1, 46, 1), */
+    }
+
+   50%, 70%{
+        color:  #fcc318;
+    }
+}
+
+.up {
+    color: transparent;
+    font-size: 5rem;
+    /* border: 1px solid green; */
+    -webkit-animation-name: up;
+    -webkit-animation-duration: 11s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+
+}
+@-webkit-keyframes up {
+    0% {
+    }
+    80% {
+        color:  rgba(1, 1, 46, 1);
+    }
+
+   70%, 80%{
+        color: rgb(255, 0, 0);
+    }
+}
+
+.caps {
+    font-size: 5rem;
+    color: transparent;
+    -webkit-animation-name: effect;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+}
+
+@-webkit-keyframes effect {
+    0% {
+    }
+    90% {
+        color:  rgba(1, 1, 46, 1);
+    }
+
+   90%, 100%{
+        color: green;
+    }
+    
+}
+
+.ever {
+    color: transparent;
+    margin-left:-8px;
+    -webkit-animation-name: ever;
+    -webkit-animation-duration: 9s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+}
+
+@-webkit-keyframes ever {
+    0% {
+    }
+    90% {
+        color:  rgba(1, 1, 46, 1);
+    }
+
+   70%, 100%{
+        color: rgb(70, 120, 255);
+    }
+}
+
+.ommicang {
+    display: flex;
+    position: fixed;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 22.4rem;
+     background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* animation: animate  4s linear infinite; */
+}
+
+/* Circular Ring0 Inc+ */
+
+#loader {
+    margin: 0;
+    padding: 0;
+    /* background: #000; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* z-index: 9; */
+}
+
+.ring {
+    position: absolute;
+    width: 38rem;
+    height: 37rem;
+    border-radius: 50%;
+    /* animation: ring 5s linear ; */
+    -webkit-animation-name: ring;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+    opacity: 1;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+
+@-webkit-keyframes ring {
+    0%{
+        /* transform: rotate(0deg);
+        box-shadow: 5px 5px 5px #e65c00; */
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 5px 20px 5px #18b201;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 5px 5px 5px #0456c8;
+    }
+   
+}
+
+.ring:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, .3);
+}
+
+/* Circular Ring0 Inc End */
+
+/* Circular Ring1 Inc+ */
+
+#loader1 {
+    margin: 0;
+    padding: 0;
+    /* background: #000; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* z-index: 9; */
+}
+
+.ring1 {
+    position: absolute;
+    width: 30.5rem;
+    height: 32rem;
+    border-radius: 50%;
+    /* animation: ring1 5s linear ; */
+    -webkit-animation-name: ring1;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+    opacity: 1;
+    margin-left: 1rem;
+    border-top: -100%;
+    margin-bottom: .5rem;
+}
+
+@-webkit-keyframes ring1 {
+    0%{
+
+    }
+    2%,45%{
+        transform: rotate(360deg);
+        box-shadow: 5px 5px 5px #000;
+        /* #e65c00 */
+    }
+    35%,50%{
+        transform: rotate(180deg);
+        box-shadow: 5px 15px 5px #18b201;
+    }
+    100%{
+        transform: rotate(0deg);
+        box-shadow: 5px 5px 5px #0456c8;
+    }
+   
+}
+
+.ring1:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, .3);
+}
+
+/* Circular Ring1 Inc End */
+
